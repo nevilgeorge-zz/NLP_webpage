@@ -1,0 +1,22 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #566abd;
+  background-image: url("concrete_seamless.png"); }
+
+h1 {
+  font-weight: normal;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 20px 0 100px 10px; }
+  h1 span {
+    font-size: 13px;
+    display: block;
+    padding-left: 4px; }
+
+.button span{
+  display: block;}
+
+/*# sourceMappingURL=test.css.map */
