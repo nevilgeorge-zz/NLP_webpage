@@ -14,21 +14,50 @@
 		<link rel="stylesheet" href=" {{url_for('static', filename='buttons/css/buttons.css')}} ">
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script type="text/javascript" src=" {{url_for('static', filename='buttons/js/buttons.js')}} "></script>
-		<script type="text/javascript" src=" {{url_for('static', filename='jspkg-archive/jquery.dynatable.js')}} "></script>
-		<link rel="stylesheet" href=" {{url_for('static', filename='jspkg-archive/jquery.dynatable.css')}} "></link>
+
+		<script type="text/javascript" src=" {{url_for('static', filename='mrjsontable/scripts/mrjsontable.js')}} "></script>
+		<link href=" {{url_for('static', filename='mrjsontable/css/mrjsontable.css')}} " rel="stylesheet" />
+
 	</head>
 	<body>
 		<h1>Golden Globes Results<span>Created by Brendan Frick, Nevil George, Frank Avino, and Pete Huang</span></h1>
 		<br>
-		<table id="my-final-table">
-		  <thead>
-		    <th>Band</th>
-		    <th>Song</th>
-		  </thead>
-		  <tbody>
-		  </tbody>
-		</table>
 
+<div id="mydiv"></div>
+<script>
+    $(function () {
+        $("#mydiv").mrjsontable({
+            columns: [
+                {
+                    heading: "Column 1",
+                    data: "json_data_field_name", // see how this links to the json object further down
+                    type: "string", // can be string, int, float, datetime
+                    sortable: true, // is the field sortable (optional defaults to false)
+                    starthidden: false // should the field be hidden when loaded (optional defaults to false)
+                },
+                new $.fn.mrjsontablecolumn({
+                    heading: "Name of category",
+                    data: "name"
+                }),
+                {
+                    heading: "Another heading",
+                    // etc...
+                }
+            ],
+            data: [
+                {
+                    yourdata: yourvalue,
+                    json_data_field_name: value //in this example the first column is looking for this field specified in the data property,
+                    name: name_value // in this example the second column is looking for this value
+                },
+                {
+                    yourdata: yourvalue,
+                    // etc...
+                }
+            ]
+        });
+    });
+</script>
 		{{data}}
 
 	</body>
