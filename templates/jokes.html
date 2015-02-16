@@ -20,16 +20,14 @@
 	<body>
 		<h1>Golden Globes Results<span>Created by Brendan Frick, Nevil George, Frank Avino, and Pete Huang</span></h1>
 		<br>
-		<table id="my-final-table">
-		  <thead>
-		    <th>Band</th>
-		    <th>Song</th>
-		  </thead>
-		  <tbody>
-		  </tbody>
+		<table border="1" style="width:100%">
+			{% for joke in data %}
+			<tr>
+				<td>{{joke.names}}</td>
+				<td>{{joke.text}}</td> 
+			</tr>
+			{% endfor %}
 		</table>
-
-		{{data}}
 
 	</body>
 
