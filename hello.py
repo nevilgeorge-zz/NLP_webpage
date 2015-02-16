@@ -12,7 +12,7 @@ def index():
 
 @app.route("/findwinners")
 def find_winners():
-	return "Finding winners..."
+	return render_template('table.html')
 
 if __name__ == "__main__":
     app.run()

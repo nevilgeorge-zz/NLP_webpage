@@ -14,13 +14,20 @@
 		<link rel="stylesheet" href=" {{url_for('static', filename='buttons/css/buttons.css')}} ">
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script type="text/javascript" src=" {{url_for('static', filename='buttons/js/buttons.js')}} "></script>
+		<script type="text/javascript" src=" {{url_for('static', filename='jspkg-archive/jquery.dynatable.js')}} "></script>
+		<link rel="stylesheet" href=" {{url_for('static', filename='jspkg-archive/jquery.dynatable.css')}} "></link>
 	</head>
 	<body>
 		<h1>Golden Globes Results<span>Created by Brendan Frick, Nevil George, Frank Avino, and Pete Huang</span></h1>
-		<a href="/findwinners" class="button button-3d-primary button-rounded button-jumbo">List of Award Winners</a>
-		<a href="/findwinners" class="button button-3d-primary button-rounded button-jumbo">List of Award Presenters</a>
-		<a href="/findwinners" class="button button-3d-primary button-rounded button-jumbo">List of Jokes</a>
 		<br>
+		<table id="my-final-table">
+		  <thead>
+		    <th>Band</th>
+		    <th>Song</th>
+		  </thead>
+		  <tbody>
+		  </tbody>
+		</table>
 
 
 	</body>
