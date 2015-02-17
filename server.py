@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
-import json, demjson
+import json
+
 app = Flask(__name__)
 
 # url_for("static", filename="style.css")
