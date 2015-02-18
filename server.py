@@ -13,18 +13,18 @@ def index():
 
 @app.route("/winners")
 def winners():
-	json_data = open("output15.json")
-	data = json.load(json_data)
-	json_data.close()
-	structured_data = data[u'structured']
-	return render_template('winners.html', data=structured_data)
+#	json_data = open("output15.json")
+#	data = json.load(json_data)
+#	json_data.close()
+#	structured_data = data[u'structured']
+#	return render_template('winners.html', data=structured_data)
 
 @app.route("/jokes")
 def jokes():
-	json_data = open("funnytweets.json")
-	data = json.load(json_data)
-	return render_template('jokes.html', data=data)
+#	json_data = open("funnytweets.json")
+#	data = json.load(json_data)
+#	return render_template('jokes.html', data=data)
 	
 
 if __name__ == "__main__":
-    app.run()
+    #app.run()
